@@ -79,8 +79,12 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+# production:
+#   <<: *default
+#   database: doc_n_cnc_bkend_production
+#   username: doc_n_cnc_bkend
+#   password: <%= ENV["DOC_N_CNC_BKEND_DATABASE_PASSWORD"] %>
+
 production:
   <<: *default
-  database: doc_n_cnc_bkend_production
-  username: doc_n_cnc_bkend
-  password: <%= ENV["DOC_N_CNC_BKEND_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
