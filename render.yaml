@@ -1,7 +1,7 @@
 databases:
   - name: doctor_n_c&c_app
     databaseName: doctor_n_c&c_app
-    user: doctor_n_c&c_app
+    user: doctor_n_c&c_app_user
     plan: free
 
 services:
