@@ -32,4 +32,13 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
         credentials: true,
         methods: [:get, :post, :put, :patch, :delete, :options, :head]
     end
+
+    allow do
+      origins Rails.env.production? ? 'https://main.dyqdosgprnszn.amplifyapp.com/' : 'http://localhost:3002' , 'http://localhost:3001'
+  
+      resource '*',
+        headers: :any,
+        credentials: true,
+        methods: [:get, :post, :put, :patch, :delete, :options, :head]
+    end
   end
