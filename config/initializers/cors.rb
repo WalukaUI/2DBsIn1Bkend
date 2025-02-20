@@ -25,7 +25,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     end
   
     allow do
-      origins Rails.env.production? ? 'https://main.dyqdosgprnszn.amplifyapp.com/' : 'http://localhost:3002' , 'http://localhost:3001'
+      origins Rails.env.production? ? 'https://main.dyqdosgprnszn.amplifyapp.com' : 'http://localhost:3002' , 'http://localhost:3001'
   
       resource '*',
         headers: :any,
